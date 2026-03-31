@@ -1,0 +1,66 @@
+/* ── Reset ────────────────────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #faf8f4;
+  --surface: #ffffff;
+  --surface-alt: #f2efe8;
+  --border: #e2ded4;
+  --text: #1a1814;
+  --text-muted: #6b6560;
+  --accent: #c05e3c;
+  --accent-light: #f4ddd4;
+  --accent-dark: #8b3d22;
+  --success: #2d7a50;
+  --success-light: #dff0e5;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --radius: 12px;
+  --radius-sm: 6px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ── Typography ──────────────────────────────────────── */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* ── Animations ──────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

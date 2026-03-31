@@ -1,0 +1,57 @@
+.skeleton {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.skeleton__msg {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.skeleton__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skeleton__bar {
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--surface-alt) 25%,
+    #ebe8e0 50%,
+    var(--surface-alt) 75%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.6s ease infinite;
+}
+
+.skeleton__bar--title {
+  width: 30%;
+  height: 20px;
+}
+
+.skeleton__bar--text {
+  width: 85%;
+  height: 14px;
+}
+
+.skeleton__bar--short {
+  width: 55%;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
